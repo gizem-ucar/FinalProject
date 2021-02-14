@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
         //Hangi veri tabanına bağlanacağını
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localıdb)\MSSQLLocalDb;Database =Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDb;Database =Northwind;Trusted_Connection=true");
         }
 
         public DbSet<Product> Products { get; set; }
