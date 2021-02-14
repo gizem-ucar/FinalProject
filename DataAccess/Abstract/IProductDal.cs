@@ -7,7 +7,7 @@ namespace DataAccess.Abstract
 {
     public interface IProductDal:IEntityRepository  <Product>
     {
-      
+        //IEntityRepositoryı product le şekillendirmiş olduk.
 
     }
 }
