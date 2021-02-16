@@ -24,7 +24,7 @@ namespace Business.Concrete
         //Select * from Categories where CategoryId =3
         public List<Category> GetById(int categoryId)
         {
-            return _categoryDal.Get(c=>c.CategoryId == categoryId);
+            return _categoryDal.Get(c => c.CategoryId == categoryId);
         }
     }
 }
