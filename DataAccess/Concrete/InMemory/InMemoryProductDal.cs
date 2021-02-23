@@ -37,10 +37,10 @@ namespace DataAccess.Concrete.InMemory
             _products.Remove(productToDelete);
         }
 
-        public List<Product> GetAll()
-        {
-            return _products;
-        }
+        //public List<Product> GetAll()
+        //{
+        //    return _products;
+        //}
 
         public void UpDate(Product product)
         {
