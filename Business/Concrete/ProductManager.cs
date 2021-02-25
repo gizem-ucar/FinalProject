@@ -26,9 +26,7 @@ namespace Business.Concrete
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
-            //business codes     //validation
-   
-            ValidationTool.Validate(new ProductValidator(), product);
+             //validation
 
             //business codes.
             _productDal.Add(product);
