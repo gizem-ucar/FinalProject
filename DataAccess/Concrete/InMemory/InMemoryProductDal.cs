@@ -42,7 +42,7 @@ namespace DataAccess.Concrete.InMemory
         //    return _products;
         //}
 
-        public void UpDate(Product product)
+        public void Update(Product product)
         {
             //Gönderdiğim ürün id'sine sahip olan listedeki ürünü bul
             Product productToUpdate = _products.SingleOrDefault(p => p.ProductId == product.ProductId);

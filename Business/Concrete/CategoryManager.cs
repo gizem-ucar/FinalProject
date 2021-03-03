@@ -19,11 +19,11 @@ namespace Business.Concrete
 
         public IDataResult<List<Category>> GetAll()
         {
-            //İş kodlarını yazarız.
-            return new SuccessDataResult<List<Category>>( _categoryDal.GetAll());
+            //İş kodları
+            return new SuccessDataResult<List<Category>>(_categoryDal.GetAll());
         }
 
-        //Select * from Categories where CategoryId =3
+        //Select * from Categories where CategoryId = 3
         public IDataResult<Category> GetById(int categoryId)
         {
             return new SuccessDataResult<Category>(_categoryDal.Get(c => c.CategoryId == categoryId));

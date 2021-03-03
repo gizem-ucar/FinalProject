@@ -11,16 +11,14 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]  //bu işlemi yaparken insanlar nasıl ulaşsın
-    [ApiController]     //ATTRIBUTE :bir class ile ilgili bilgi verme imza vermektir.   //Javada ANNOTATION
+    [Route("api/[controller]")]    //bu işlemi yaparken insanlar nasıl ulaşsın
+    [ApiController]                //ATTRIBUTE :bir class ile ilgili bilgi verme imza vermektir.   //Javada ANNOTATION
     public class ProductsController : ControllerBase
-    {        
+    {
         //Loosely coupled
         //naming convention
-        //IoC Container --Inversion of Control
-
+        //IoC Container -- Inversion of Control
         IProductService _productService;
-
 
         public ProductsController(IProductService productService)
         {
@@ -32,14 +30,15 @@ namespace WebAPI.Controllers
         {
             //Swagger
             //Dependency chain --
-                
             var result = _productService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+
         }
+
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
@@ -48,6 +47,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(result);
             }
+
             return BadRequest(result);
         }
 
@@ -61,5 +61,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
     }
 }
