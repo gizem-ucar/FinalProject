@@ -32,7 +32,8 @@ namespace WebAPI.Controllers
             //Swagger
             //Dependency chain --
 
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);   //webde ilk dönerek bekliyor
+
             var result = _productService.GetAll();
             if (result.Success)
             {
